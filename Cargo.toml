@@ -1,0 +1,8 @@
+[package]
+name = "gogle"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+urlencoding = "2.1.0"
+cli-clipboard = "0.2.0"

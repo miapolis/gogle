@@ -1,0 +1,36 @@
+## Gogle is simple utility for getting a Google URL for a query
+
+##### Use case
+
+1. Someone asks a question in a chat that can be answered by just asking Google the same thing
+2. You use a shortcut to instantly open a terminal window with Gogle and type in what they asked
+3. A Google URL for query is copied to your clipboard and the terminal window closes
+4. You paste the URL into the chat and the entire process took as little as less than a second
+
+### Instructions:
+
+##### Requirements:
+
+- Cargo and the Rust toolchain installed
+
+##### Linux
+
+1. Clone the repo and navigate to the project directory
+2. Run `cargo build --release` and wait for the build to finish
+3. Find the resulting 'gogle' binary in the target/release directory
+4. Copy the binary to your /bin directory or any directory in your PATH environment variable
+
+###### Setting up the shortcut:
+
+Gnome:
+
+1. Navigate to _Settings/Keyboard/Keyboard Shortcuts/View and Customize Shortcuts/Custom Shortcuts_
+2. Hit the '+' button and set the shortcut to `gnome-terminal -x bash -c 'gogle'`
+3. Set the name and the shortcut to whatever you want, personally I use `Super + Shift + G`
+
+### Note
+
+I haven't had the ability yet to expirement on other platforms and desktop environments to see how it should be set up there, but I assume the process would be pretty similar:
+
+1. Building the project and placing the binary somewhere in PATH
+2. Adding a custom shortcut which opens a terminal with the 'gogle' command
