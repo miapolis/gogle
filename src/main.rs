@@ -14,6 +14,6 @@ fn main() {
     let encoded = encode(&query);
     let url = format!("{}{}", GOOGLE_BASE_URL, encoded);
     ctx.set_contents(url).unwrap();
-    
+
     thread::sleep(time::Duration::from_millis(20));
 }

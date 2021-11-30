@@ -3,9 +3,8 @@
 ##### Use case
 
 1. Someone asks a question in a chat that can be answered by just asking Google the same thing
-2. You use a shortcut to instantly open a terminal window with Gogle and type in what they asked
-3. A Google URL for query is copied to your clipboard and the terminal window closes
-4. You paste the URL into the chat and the entire process took as little as less than a second
+2. You copy their query and press a shortcut and your clipboard is modified with a Google URL
+3. You paste in the Google URL
 
 ### Instructions:
 
@@ -14,6 +13,11 @@
 - Cargo and the Rust toolchain installed
 
 ##### Linux
+
+Arch:
+Gogle is available on the AUR at: https://aur.archlinux.org/packages/gogle-git/
+
+All other distributions:
 
 1. Clone the repo and navigate to the project directory
 2. Run `cargo build --release` and wait for the build to finish
@@ -25,7 +29,7 @@
 Gnome:
 
 1. Navigate to _Settings/Keyboard/Keyboard Shortcuts/View and Customize Shortcuts/Custom Shortcuts_
-2. Hit the '+' button and set the shortcut to `gnome-terminal -x bash -c 'gogle'`
+2. Hit the '+' button and set the shortcut to just `gogle`
 3. Set the name and the shortcut to whatever you want, personally I use `Super + Shift + G`
 
 ### Note
