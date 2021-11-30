@@ -1,4 +1,4 @@
-use cli_clipboard::{ClipboardContext, ClipboardProvider};
+use clipboard::{ClipboardContext, ClipboardProvider};
 use std::{thread, time};
 use urlencoding::encode;
 
