@@ -1,18 +1,15 @@
 use cli_clipboard::{ClipboardContext, ClipboardProvider};
-use std::{io, thread, time};
+use std::{thread, time};
 use urlencoding::encode;
 
 const GOOGLE_BASE_URL: &'static str = "https://google.com/search?q=";
 
 fn main() {
-    println!("GOGLE");
     let mut ctx = ClipboardContext::new().unwrap();
-    let mut query = String::new();
-
-    io::stdin()
-        .read_line(&mut query)
-        .expect("Failed to read line");
-    query = query.replace("\n", "");
+    let mut query = ctx
+        .get_contents()
+        .expect("Failed to read clipboard contents as string.");
+    query = query.trim().to_owned();
 
     let encoded = encode(&query);
     let url = format!("{}{}", GOOGLE_BASE_URL, encoded);
