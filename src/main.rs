@@ -6,8 +6,8 @@ const GOOGLE_BASE_URL: &'static str = "https://google.com/search?q=";
 
 fn main() {
     println!("GOGLE");
-    let mut ctx = ClipboardContext::new().unwrap();
-    let mut query = ctx.get_contents().unwrap();
+    let ctx = ClipboardContext::new().unwrap();
+    let query = ctx.get_contents().unwrap();
 
     io::stdin()
         .read_line(&mut query)
