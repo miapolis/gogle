@@ -2,8 +2,11 @@ name: aur-publish
 
 on:
   push:
-    tags:
-      - "*"
+    paths:
+      - "**.rs"
+      - "**.toml"
+      - Cargo.lock
+      - .github/**
 
 jobs:
   aur-publish:
